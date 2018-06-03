@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', sans-serif;
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 100% 0%;
+  overflow-x: hidden;
+  scroll-snap-points-y: repeat(100%); }
+
+.rivalry {
+  height: 100vh;
+  width: 100%;
+  color: black;
+  position: relative;
+  scroll-snap-align: start; }
+
+.overlay {
+  position: absolute;
+  right: -5%;
+  left: -5%;
+  height: 22%;
+  background: white; }
+
+.swipe {
+  transform: scaleY(0) rotateZ(0deg);
+  transform-origin: bottom;
+  opacity: 0;
+  bottom: 0; }
+  .swipe.in {
+    transform: scaleY(1) rotateZ(-1deg);
+    opacity: 1;
+    bottom: -2%;
+    transition: transform 1000ms ease-in-out, opacity 660ms 330ms ease-in-out;
+    animation: rotato 10s ease-in-out infinite; }
+
+@keyframes rotato {
+  0% {
+    transform: rotateZ(-1deg); }
+  50% {
+    transform: rotateZ(1deg); }
+  100% {
+    transform: rotateZ(-1deg); } }
+#edinburgh {
+  background: url(https://i.imgur.com/plVVSII.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#black-country {
+  background: url(https://i.imgur.com/QCczDMf.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#ruhr {
+  background: url(https://i.imgur.com/rS7Q1g4.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#paulista {
+  background: url(https://i.imgur.com/h5thZXe.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#second-city {
+  background: url(https://i.imgur.com/2ibwqli.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#north-london {
+  background: url(https://i.imgur.com/m9eM9bP.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#tyne-wear {
+  background: url(https://i.imgur.com/zR4NW8z.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#dockers {
+  background: url(https://i.imgur.com/dDbM04z.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#fla-flu {
+  background: url(https://i.imgur.com/b4wkJLO.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#di-milano {
+  background: url(https://i.imgur.com/PyJl3iU.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#north-west {
+  background: url(https://i.imgur.com/OC2RGvc.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#della-capitale {
+  background: url(https://i.imgur.com/EOjziW8.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#adversaries {
+  background: url(https://i.imgur.com/8K1MCof.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#clasico {
+  background: url(https://i.imgur.com/nQD2Wvl.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#klassieker {
+  background: url(https://i.imgur.com/5TTyVTj.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#cairo {
+  background: url(https://i.imgur.com/x0jXSBJ.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#intercontinental {
+  background: url(https://i.imgur.com/JhPY3Jh.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#eternal {
+  background: url(https://i.imgur.com/MrX0cYW.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#old-firm {
+  background: url(https://i.imgur.com/SuIjk0X.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+#superclasico {
+  background: url(https://i.imgur.com/LRtdATb.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+
+.rivalry--details {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  right: 8%; }
+
+.rivalry--name {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1.33rem;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.25; }
+
+.rivalry--info {
+  margin: 0;
+  padding: 0;
+  padding-bottom: .8rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.25; }
+
+.info--big {
+  font-size: 1.5rem; }
+
+.bottom {
+  bottom: 20%;
+  left: 8%;
+  right: 8%;
+  position: absolute; }
+
+.tight {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 600px; }
+
+.outleft {
+  transform: translateX(-2rem);
+  opacity: 0;
+  transition: transform 660ms cubic-bezier(0.55, 0.055, 0.675, 0.19), opacity 660ms 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .outleft.in {
+    transform: translateX(0);
+    opacity: 1; }
+
+.outup {
+  transform: translateY(-2rem);
+  opacity: 0;
+  transition: transform 660ms cubic-bezier(0.55, 0.055, 0.675, 0.19), opacity 660ms 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .outup.in {
+    transform: translateY(0);
+    opacity: 1; }
+
+@media screen and (min-width: 760px) {
+  .rivalry--name {
+    padding-bottom: 2.25rem;
+    font-size: 5rem;
+    line-height: .9; }
+
+  .rivalry--info {
+    padding-bottom: .6rem;
+    font-size: 1.6rem;
+    line-height: 1.25; }
+
+  .info--big {
+    font-size: 1.8rem; }
+
+  .tight {
+    max-width: 650px;
+    line-height: 1.33;
+    font-size: 1.4rem; } }
+
+/*# sourceMappingURL=style.css.map */
