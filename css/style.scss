@@ -8,13 +8,13 @@ body {
 
   // Scroll Snapping, Firefox Only. Issue - forces intersection observer to load 100vh  elements before in view.
   scroll-snap-type: mandatory;
-  scroll-snap-destination: 100% 0%; overflow-x: hidden;
+  scroll-snap-destination: 100% 0%;
   scroll-snap-points-y: repeat(100%);
 }
 
 .rivalry {
   height: 100vh; width: 100%; color: black;
-  position: relative;
+  position: relative; overflow: hidden;
 
   // Scroll Snapping, Firefox Only
   scroll-snap-align: start;
@@ -25,22 +25,15 @@ body {
 }
 
 .overlay {
-  position: absolute; right: -5%; left: -5%; height: 22%; background: white;
+  position: absolute; width: 100%; background: radial-gradient(rgba(236, 219, 192, 0.75), rgba(217, 198, 168, 0.75));
 }
 
 .swipe {
-  transform: scaleY(0) rotateZ(0deg); transform-origin: bottom; opacity: 0; bottom: 0;
+  margin: 15vh 0; height: 70vh; opacity: 0;
   &.in {
-    transform: scaleY(1) rotateZ(-1deg); opacity: 1;  bottom: -2%;
-    transition: transform 1000ms ease-in-out, opacity 660ms 330ms ease-in-out;
-    animation: rotato 10s ease-in-out infinite;
+    margin: 0; height: 100vh; opacity: 1;
+    transition: opacity 1000ms ease-out;
   }
-}
-
-@keyframes rotato {
-  0% { transform: rotateZ(-1deg); }
-  50% { transform: rotateZ(1deg); }
-  100% { transform: rotateZ(-1deg); }
 }
 
 @import 'backgrounds';
@@ -75,7 +68,7 @@ body {
 }
 
 @mixin transition-in {
-  transition: transform 660ms cubic-bezier(0.55, 0.055, 0.675, 0.19), opacity 660ms 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 660ms 330ms cubic-bezier(0.55, 0.055, 0.675, 0.19), opacity 660ms 450ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .outleft {
